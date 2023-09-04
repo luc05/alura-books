@@ -12,7 +12,7 @@ O projeto foi feito de acordo os cursos;
 
 - Página Inicial
   
-![paginaInicial](![image](https://github.com/luc05/alura-books/assets/27972551/260e0519-5257-43ba-af76-53627e54f433))
+![paginaInicial](https://github.com/luc05/alura-books/assets/27972551/260e0519-5257-43ba-af76-53627e54f433)
 
 # 🔨 Funcionalidades do projeto
 
