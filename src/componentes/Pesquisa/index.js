@@ -1,7 +1,8 @@
 import styled from "styled-components"
 import Input from "../Input"
 import { useState } from "react"
-import { livros } from "./dadosPesquisa"
+import { useEffect } from "react"
+import { getLivros } from "../../servicos/livros"
 
 const PesquisaContainer = styled.section`
     background-image: linear-gradient(90deg, #002F52 35%, #326589 165%);
@@ -40,6 +41,14 @@ display: flex;
 `
 function Pesquisa() {
     const [livrosPesquisados, setLivrosPesquisados] = useState([])
+    const [livros, setLivros] = useState([])
+    useEffect(() => {
+        fetchLivros()
+    }, [])
+    async function fetchLivros() {
+        const livrosDaAPI = await getLivros()
+        setLivros(livrosDaAPI)
+    }
     return(
         <PesquisaContainer>
             <Titulo>Já sabe por onde começar?</Titulo>
